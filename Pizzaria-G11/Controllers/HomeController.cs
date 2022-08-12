@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Pizzaria_G11.Models;
+using Pizzaria_G11.Models.Interface;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

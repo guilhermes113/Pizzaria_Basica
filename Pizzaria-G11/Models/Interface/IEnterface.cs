@@ -8,7 +8,7 @@ namespace Pizzaria_G11.Models.Interface
     public class IEnterface
     {
         public int Id { get; }
-        public DateTime DataCadastro { get; }
-        public DateTime DataAlteração { get; }
+        public DateTime DataCadastro { get;  }
+        public DateTime DataAlteracao { get;  }
     }
 }
