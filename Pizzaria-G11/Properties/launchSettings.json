@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Pizzaria_G11": {
+    "PizzariAtv": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

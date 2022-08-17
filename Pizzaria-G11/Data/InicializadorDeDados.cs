@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Pizzaria_G11.Models;
+using PizzariAtv.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Pizzaria_G11.Data
+namespace PizzariAtv.Data
 {
     public class InicializadorDeDados
     {

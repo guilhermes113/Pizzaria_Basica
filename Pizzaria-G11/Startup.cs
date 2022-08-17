@@ -1,4 +1,4 @@
-using Pizzaria_G11.Data;
+using PizzariAtv.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pizzaria_G11
+namespace PizzariAtv
 {
     public class Startup
     {
@@ -55,7 +55,7 @@ namespace Pizzaria_G11
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Pizzas}/{action=Index}/{id?}");
             });
             InicializadorDeDados.Inicializar(app);
         }

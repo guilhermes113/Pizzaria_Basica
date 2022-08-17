@@ -1,6 +1,6 @@
 using System;
 
-namespace Pizzaria_G11.Models
+namespace PizzariAtv.Models
 {
     public class ErrorViewModel
     {

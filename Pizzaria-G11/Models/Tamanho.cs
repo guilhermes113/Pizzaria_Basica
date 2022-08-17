@@ -1,11 +1,11 @@
-﻿using Pizzaria_G11.Models.Interface;
+﻿using PizzariAtv.Models.Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pizzaria_G11.Models
+namespace PizzariAtv.Models
 {
     public class Tamanho : IEnterface
     {
@@ -21,7 +21,9 @@ namespace Pizzaria_G11.Models
         public DateTime DataAlteracao { get; private set; }
         [Display(Name = "Tamanho")]
         public string Nome { get; private set; }
-        
+        [Display(Name = "Pedaços")]
+        public string Pedacos { get; private set; }
+
         #region relacionamento
         public List<Pizza> Pizzas { get; private set; }
         #endregion

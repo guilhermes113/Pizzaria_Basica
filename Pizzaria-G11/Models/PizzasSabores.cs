@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pizzaria_G11.Models
+namespace PizzariAtv.Models
 {
     public class PizzasSabores
     {
@@ -15,7 +15,7 @@ namespace Pizzaria_G11.Models
 
         public Pizza Pizza { get; set; }
         public int PizzaId { get; set; }
-        public Tamanho Sabor { get; set; }
+        public Sabor Sabor { get; set; }
         public int SaborId { get; set; }
 
     }

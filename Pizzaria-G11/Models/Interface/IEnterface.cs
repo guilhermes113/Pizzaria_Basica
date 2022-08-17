@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pizzaria_G11.Models.Interface
+namespace PizzariAtv.Models.Interface
 {
     public class IEnterface
     {
-        public int Id { get; }
-        public DateTime DataCadastro { get;  }
-        public DateTime DataAlteracao { get;  }
+        public int Id { get; set; }
+        public DateTime DataCadastro { get; set; }
+        public DateTime DataAlteracao { get; set; }
     }
 }

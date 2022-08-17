@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Pizzaria_G11.Models;
+using PizzariAtv.Models;
 
-namespace Pizzaria_G11.Data
+namespace PizzariAtv.Data
 {
     public class PizzariaDbContext : DbContext
     {

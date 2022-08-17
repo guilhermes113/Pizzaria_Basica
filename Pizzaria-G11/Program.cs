@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pizzaria_G11
+namespace PizzariAtv
 {
     public class Program
     {
