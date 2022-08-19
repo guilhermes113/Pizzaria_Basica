@@ -2,12 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Pizzaria_G11</RootNamespace>
+    <RootNamespace>PizzariaAtv</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\ViewModels\Request\" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">

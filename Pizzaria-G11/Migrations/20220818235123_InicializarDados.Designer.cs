@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PizzariAtv.Data;
 
-namespace PizzariAtv.Migrations
+namespace PizzariaAtv.Migrations
 {
     [DbContext(typeof(PizzariaDbContext))]
-    [Migration("20220816225841_inicial")]
-    partial class inicial
+    [Migration("20220818235123_InicializarDados")]
+    partial class InicializarDados
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,7 +46,7 @@ namespace PizzariAtv.Migrations
                     b.Property<decimal>("Preco")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("TamanhoId")
+                    b.Property<int>("TamanhoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -123,7 +123,9 @@ namespace PizzariAtv.Migrations
                 {
                     b.HasOne("PizzariAtv.Models.Tamanho", "Tamanho")
                         .WithMany("Pizzas")
-                        .HasForeignKey("TamanhoId");
+                        .HasForeignKey("TamanhoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Tamanho");
                 });

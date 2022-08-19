@@ -17,12 +17,11 @@ namespace PizzariAtv.Controllers
         }
         public IActionResult Index()
         {
-            var result = _context.Tamanhos;
-            return View(result);
+            return View(_context.Tamanhos);
         }
         public IActionResult Detalhes(int id)
         {
-            return View(_context.Tamanhos);
+            return View(_context.Tamanhos.Find(id));
 
         }
         public IActionResult Criar()

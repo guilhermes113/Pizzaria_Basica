@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PizzariAtv.Data;
 
-namespace PizzariAtv.Migrations
+namespace PizzariaAtv.Migrations
 {
     [DbContext(typeof(PizzariaDbContext))]
     partial class PizzariaDbContextModelSnapshot : ModelSnapshot
@@ -44,7 +44,7 @@ namespace PizzariAtv.Migrations
                     b.Property<decimal>("Preco")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("TamanhoId")
+                    b.Property<int>("TamanhoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -121,7 +121,9 @@ namespace PizzariAtv.Migrations
                 {
                     b.HasOne("PizzariAtv.Models.Tamanho", "Tamanho")
                         .WithMany("Pizzas")
-                        .HasForeignKey("TamanhoId");
+                        .HasForeignKey("TamanhoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Tamanho");
                 });

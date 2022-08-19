@@ -34,9 +34,9 @@ namespace PizzariAtv.Data
                 {
                     context.Pizzas.AddRange(new List<Pizza>()
                     {
-                        new Pizza("4 Quijos","Uma Pizzas com 4 tipos deliciosos de Queijos.",20,"https://riopardolaticinio.com.br/wp-content/uploads/2022/02/pizza4queijos-1024x819.jpg"),
-                        new Pizza("Calabresa","A clássica pizza de Calabresa que satisfaz qualquer um.",20,"https://www.clonepizza.com.br/wp-content/uploads/calabresa-1.jpg"),
-                        new Pizza("Frango com Catupiry","Outra clássica pizza de dar água na boca.",20,"https://i.pinimg.com/736x/67/ee/2a/67ee2a4762ca2f6e44deddafd4a5b3cb.jpg")
+                        new Pizza("4 Quijos","Uma Pizzas com 4 tipos deliciosos de Queijos.",20,"https://riopardolaticinio.com.br/wp-content/uploads/2022/02/pizza4queijos-1024x819.jpg",1),
+                        new Pizza("Calabresa","A clássica pizza de Calabresa que satisfaz qualquer um.",20,"https://www.clonepizza.com.br/wp-content/uploads/calabresa-1.jpg",1),
+                        new Pizza("Frango com Catupiry","Outra clássica pizza de dar água na boca.",20,"https://i.pinimg.com/736x/67/ee/2a/67ee2a4762ca2f6e44deddafd4a5b3cb.jpg",1)
                        
                     });
                     context.SaveChanges();

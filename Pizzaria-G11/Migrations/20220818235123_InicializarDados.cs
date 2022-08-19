@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace PizzariAtv.Migrations
+namespace PizzariaAtv.Migrations
 {
-    public partial class inicial : Migration
+    public partial class InicializarDados : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,7 +51,7 @@ namespace PizzariAtv.Migrations
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ImagemURL = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Preco = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    TamanhoId = table.Column<int>(type: "int", nullable: true)
+                    TamanhoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -61,7 +61,7 @@ namespace PizzariAtv.Migrations
                         column: x => x.TamanhoId,
                         principalTable: "Tamanhos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
