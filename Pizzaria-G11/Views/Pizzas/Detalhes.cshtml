@@ -1,0 +1,13 @@
+﻿@model PizzariAtv.Models.ViewModels.Responsive.GetPizzasDTO
+<div class="row">
+    <a asp-action="Criar" class="btn btn-block badge-success col-3"> Adicionar Pizza</a>
+    <div class="col-md-2">
+        <img class="img-thumbnail" src="@Model.ImagemURL" />
+    </div>
+    <div class="col-md-10">
+        <h1>@Model.Nome</h1>
+        <p>@Model.Descricao</p>
+        <p>@Model.Preco</p>
+        <p>@Model.Tamanho</p>
+    </div>
+</div>
