@@ -1,6 +1,10 @@
 ﻿@model PizzariAtv.Models.ViewModels.Responsive.GetPizzasDTO
+
+@{
+    ViewData["Title"] = "Detalhes" ;
+}
 <div class="row">
-    <a asp-action="Criar" class="btn btn-block badge-success col-3"> Adicionar @Model.Nome</a>
+
     <div class="col-md-2">
         <img class="img-thumbnail" src="@Model.ImagemURL" />
     </div>

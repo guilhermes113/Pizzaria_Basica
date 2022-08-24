@@ -60,7 +60,8 @@ namespace PizzariAtv.Controllers
             ViewBag.Tamanhos = new SelectList(resp.Tamanhos, "Id", "Nome");
 
         }
-        [HttpPost]IActionResult Criar([Bind("Nome,Descricao,ImagemURL")]PostPizzaDTO pizzaDTO)
+        [HttpPost]
+        public IActionResult Criar(PostPizzaDTO pizzaDTO)
         {
             if (!ModelState.IsValid)
             {

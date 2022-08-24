@@ -10,6 +10,8 @@ namespace PizzariaAtv.Models.ViewModels.Request
     {
         [Required(ErrorMessage = "Tamanho é  Obrigatório")]
         public string Nome { get; set; }
+        [Required(ErrorMessage = "Pedaços é  Obrigatório")]
+        public int Pedacos { get; set; }
         [Required(ErrorMessage = "Quantidade de 'Pedaços' é  Obrigatório")]
         public string Descricao { get; set; }
     }

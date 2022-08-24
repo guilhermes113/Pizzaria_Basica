@@ -9,11 +9,13 @@ namespace PizzariAtv.Models
 {
     public class Tamanho : IEnterface
     {
-        public Tamanho(string nome)
+        public Tamanho(string nome,int pedacos,string descricao)
         {
             DataCadastro = DataCadastro;
             DataAlteracao = DataCadastro;
             Nome = nome;
+            Pedacos = pedacos;
+            Descricao = descricao;
         }
 
         public int Id { get; private set; }
@@ -22,15 +24,19 @@ namespace PizzariAtv.Models
         [Display(Name = "Tamanho")]
         public string Nome { get; private set; }
         [Display(Name = "Pedaços")]
-        public string Pedacos { get; private set; }
+        public int Pedacos { get; private set; }
+        [Display(Name ="Descrição")]
+        public string Descricao { get; set; }
 
         #region relacionamento
         public List<Pizza> Pizzas { get; private set; }
         #endregion
 
-        public void AtualizarDados(string nome)
+        public void AtualizarDados(string nome, int pedacos, string descricao)
         {
             Nome = nome;
+            Pedacos = pedacos;
+            Descricao = descricao;
             DataAlteracao = DateTime.Now;
         }
     }

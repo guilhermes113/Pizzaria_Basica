@@ -14,9 +14,9 @@ namespace PizzariaAtv.Models.ViewModels.Request
         [Required(ErrorMessage = "Descrição do Pizza é  Obrigatório")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Descrição do Pizza deve ter de 10 a 50 caractéres")]
         public string Descricao { get; set; }
-        [Required(ErrorMessage = "Preço Obrigatório")]
+        [Required(ErrorMessage = "Preço Obrigatorio")]
         public decimal Preco { get; set; }
-        [Required(ErrorMessage = "Imagem Obrigatória")]
+        [Required(ErrorMessage = "Imagem Obrigatoria")]
         public string ImagemURL { get; set; }
         [Required(ErrorMessage = "Tamanho Obrigatória")]
         public int TamanhoId { get; set; }

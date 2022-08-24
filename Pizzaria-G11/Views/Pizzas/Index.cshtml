@@ -3,8 +3,12 @@
 @{
     ViewData["Title"] = "Pizzas";
 }
-
+<div>
+    <a asp-action="Criar" class="btn btn-block badge-success col-4-md"> Adicionar Pizza</a>
+</div>
 <div class="row">
+    
+    
     @foreach (var item in Model)
     {
         <div class="col-md-4 col-xs-6 border-primary mb-3">
@@ -24,8 +28,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">
-                             <p class="card-text ">
-                                
+                            <p class="card-text ">
+
                             </p>
 
                         </div>

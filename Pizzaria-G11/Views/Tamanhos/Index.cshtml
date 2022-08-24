@@ -1,6 +1,17 @@
-﻿@model PizzariAtv.Models.Tamanho
+﻿@model IEnumerable<Tamanho>
+@{ ViewData["Title"] = "Detalhes"; }
 
-<hr />
-<h1 class="offset-4 col-md-4">@Model.Nome</h1>
-<hr />
+<div class="row">
 
+
+    @foreach (var item in Model)
+    {
+        <div class="card text-bg-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">@item.Nome</div>
+            <div class="card-body">
+                <h5 class="card-title">@item.Pedacos</h5>
+                <p class="card-text">@item.Descricao</p>
+            </div>
+        </div>
+    }
+</div>

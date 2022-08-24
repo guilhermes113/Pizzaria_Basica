@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PizzariaAtv.Migrations
 {
-    public partial class InicializarDados : Migration
+    public partial class denovo : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +16,8 @@ namespace PizzariaAtv.Migrations
                     DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataAlteracao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ImagemURL = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ImagemURL = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -32,7 +33,8 @@ namespace PizzariaAtv.Migrations
                     DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataAlteracao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Pedacos = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Pedacos = table.Column<int>(type: "int", nullable: false),
+                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

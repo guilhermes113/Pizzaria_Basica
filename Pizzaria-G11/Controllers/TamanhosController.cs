@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PizzariaAtv.Models.ViewModels.Request;
 using PizzariAtv.Data;
+using PizzariAtv.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,13 +30,59 @@ namespace PizzariAtv.Controllers
         {
             return View();
         }
-        public IActionResult Atualizar()
+        [HttpPost]
+        public IActionResult Criar(PostTamanhoDTO tamanhoDTO)
         {
-            return View();
+            if (!ModelState.IsValid) { return View(); }
+
+            Tamanho tamanho = new Tamanho
+            (
+                tamanhoDTO.Nome,
+                tamanhoDTO.Pedacos,
+                tamanhoDTO.Descricao
+            );
+            _context.Tamanhos.Add(tamanho);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
         }
-        public IActionResult Deletar()
+        public IActionResult Atualizar(int id)
         {
-            return View();
+            var result = _context.Sabores.FirstOrDefault(x => x.Id == id);
+            if (result == null) return View("NotFound");
+            var resp = new PostSaborDTO()
+            {
+                Nome = result.Nome,
+                Descricao = result.Descricao,
+                ImagemURL = result.ImagemURL
+
+            };
+            return View(resp);
+        }
+        [HttpPost]
+        public IActionResult Atualizar(int id, PostTamanhoDTO tamanhoDTO)
+        {
+            var result = _context.Tamanhos.FirstOrDefault(x => x.Id == id);
+            if (!ModelState.IsValid) return View(result);
+            result.AtualizarDados(tamanhoDTO.Nome,tamanhoDTO.Pedacos,tamanhoDTO.Descricao);
+            _context.Update(result);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Deletar(int id)
+        {
+            var remove = _context.Tamanhos.FirstOrDefault(x => x.Id == id);
+            if (remove == null) return View("NotFound");
+            return RedirectToAction(nameof(Index));
+        }
+        [HttpPost, ActionName("Deletar")]
+        public IActionResult ConfirmarDeletar(int id)
+        {
+            var remove = _context.Tamanhos.FirstOrDefault(x => x.Id == id);
+            if (remove == null) return View("NotFound");
+            _context.Remove(remove);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

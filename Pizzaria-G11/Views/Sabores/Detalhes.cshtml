@@ -1,1 +1,16 @@
-﻿
+﻿@model Sabor
+@{
+    ViewData["Title"] = "Detalhes ";
+}
+<div class="row">
+    <div class="col-md-4">
+        <img class="img-thumbnail" src="@Model.ImagemURL" />
+    </div>
+    <h4>
+        @Model.Nome
+    </h4>
+    <h3>
+        @Model.Descricao
+    </h3>
+    
+ <div>

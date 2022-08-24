@@ -10,8 +10,8 @@ using PizzariAtv.Data;
 namespace PizzariaAtv.Migrations
 {
     [DbContext(typeof(PizzariaDbContext))]
-    [Migration("20220818235123_InicializarDados")]
-    partial class InicializarDados
+    [Migration("20220824003329_denovo")]
+    partial class denovo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -84,6 +84,9 @@ namespace PizzariaAtv.Migrations
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ImagemURL")
                         .HasColumnType("nvarchar(max)");
 
@@ -108,11 +111,14 @@ namespace PizzariaAtv.Migrations
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Pedacos")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Pedacos")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

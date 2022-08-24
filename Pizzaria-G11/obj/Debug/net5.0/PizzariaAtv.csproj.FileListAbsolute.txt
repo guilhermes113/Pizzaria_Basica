@@ -79,3 +79,7 @@ C:\Users\guilherme.srocha11\Desktop\Pizzaria-G11\Pizzaria-G11\obj\Debug\net5.0\R
 C:\Users\guilherme.srocha11\Desktop\Pizzaria-G11\Pizzaria-G11\obj\Debug\net5.0\Razor\Views\Sabores\Deletar.cshtml.g.cs
 C:\Users\guilherme.srocha11\Desktop\Pizzaria-G11\Pizzaria-G11\obj\Debug\net5.0\Razor\Views\Sabores\Detalhes.cshtml.g.cs
 C:\Users\guilherme.srocha11\Desktop\Pizzaria-G11\Pizzaria-G11\obj\Debug\net5.0\Razor\Views\Sabores\Index.cshtml.g.cs
+C:\Users\guilherme.srocha11\Desktop\Pizzaria-G11\Pizzaria-G11\obj\Debug\net5.0\Razor\Views\Tamanhos\Atualizar.cshtml.g.cs
+C:\Users\guilherme.srocha11\Desktop\Pizzaria-G11\Pizzaria-G11\obj\Debug\net5.0\Razor\Views\Tamanhos\Criar.cshtml.g.cs
+C:\Users\guilherme.srocha11\Desktop\Pizzaria-G11\Pizzaria-G11\obj\Debug\net5.0\Razor\Views\Tamanhos\Deletar.cshtml.g.cs
+C:\Users\guilherme.srocha11\Desktop\Pizzaria-G11\Pizzaria-G11\obj\Debug\net5.0\Razor\Views\Tamanhos\Detalhes.cshtml.g.cs
